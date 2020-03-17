@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Scoped CSS Variables and JS 🎨</title>
 </head>
+
 <body>
   <h2>JS_30 #3 - <span class='css'>CSS</span> Variables & <span class='hl'>JS</span></h2>
 
@@ -27,17 +29,17 @@
       --blur: 2px;
     }
 
-    img{
+    img {
       padding: var(--spacing);
       background: var(--base);
-      filter:blur(var(--blur));
+      filter: blur(var(--blur));
     }
 
-    .hl{
+    .hl {
       color: var(--base);
     }
 
-    .css{
+    .css {
       color: var(--base);
     }
 
@@ -68,13 +70,19 @@
     const inputs = document.querySelectorAll('.controls input');
     console.log(inputs);
 
-    function handleUpdate(){
-      console.log(this.value)
+    function handleUpdate() {
+      // const suffix = this.dataset;
+
+      console.log(this.dataset)
     }
 
-    handleUpdate()
+    inputs.forEach(input => input.addEventListener('change', handleUpdate))
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate))
+
+
 
   </script>
 
 </body>
+
 </html>
